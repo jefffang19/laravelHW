@@ -22,3 +22,5 @@ Route::get('foo', function () {
 });
 
 Route::get('/display/{name}','TableController@RenderExample')->name('render_example');
+
+Route::get('/movies/{user_id}', 'TableController@testSelectMovie')->name('render_movies_example');

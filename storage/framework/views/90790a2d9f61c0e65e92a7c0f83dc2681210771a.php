@@ -87,6 +87,8 @@
                 <div class="link">
                     <a href=<?php echo e(route('render_example',['name' => 'from index'])); ?>>Display sample</a>
                 </div>
+                <div class="link">
+                    <a href=<?php echo e(route('render_movies_example',['user_id' => 'from index'])); ?>>Moive Example</a>
             </div>
         </div>
 
