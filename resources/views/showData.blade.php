@@ -80,12 +80,8 @@
                 @endif
             
             <div class="content">
-                <div class="title m-b-md">
-                    Sample
-                </div>
-
-                <div class="link">
-                    <a href={{route('render_example',['name' => 'jeff'])}}>Display sample</a>
+                <div class="title">
+                    {{$data}}
                 </div>
         </div>
 

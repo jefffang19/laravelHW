@@ -11,9 +11,3 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }
-
-class UserController extends Controller{
-    public function RenderExample(String $name){
-        return view('hello', ['name' => $name]);
-    }
-}

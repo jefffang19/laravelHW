@@ -81,7 +81,7 @@
             
             <div class="content">
                 <div class="title m-b-md">
-                    Hello World
+                    Hello {{$name}} {{$name2}}
                 </div>
 
             </div>

@@ -9,13 +9,18 @@ use App\Http\Resources\RatingResource;
 use App\Http\Resources\MovieResource;
 
 class TableController extends Controller{
-    public function RenderExample(String $name){
-        return view('hello', ['name' => $name]);
+    public function RenderExample($name){
+        return view('hello')->with(array('name'=> $name,'name2'=>'jeff'));
     }
 
-    public function testSelectMovie(Request $request){
-        $userid = 5;
-        $movies = Rating::where('user_id', 5)->get();
+    public function RenderMovie(Request $request){
+        $userid = $request->input('user_id');
+        $movies = Rating::where('user_id', $userid)->get();
         return RatingResource::collection($movies);
+    }
+
+    public function testSelectMovie($id){
+        $movies = Rating::where('user_id', $id)->get();
+        return view('showData', ['data' => RatingResource::collection($movies)]);
     }
 }
