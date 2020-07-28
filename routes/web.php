@@ -26,3 +26,10 @@ Route::get('/display/{name}','TableController@RenderExample')->name('render_exam
 Route::get('/movies/{user_id}', 'TableController@testSelectMovie')->name('render_movies_example');
 
 Route::get('/movies', 'TableController@RenderMovie');
+
+//post method require you to edit VerifyCsrfToken.php in middleware
+Route::post('/ratings/insert', 'TableController@insertRating')->name('insert_rating');
+
+Route::post('/ratings/delete', 'TableController@deleteRating')->name('delete_rating');
+
+Route::post('/ratings/update', 'TableController@updateRating')->name('update_rating');

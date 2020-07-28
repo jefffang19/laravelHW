@@ -12,6 +12,9 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        //
+        //exception routes
+        '/ratings/insert',
+        '/ratings/delete',
+        '/ratings/update'
     ];
 }

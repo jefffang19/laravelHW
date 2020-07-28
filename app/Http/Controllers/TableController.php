@@ -23,4 +23,28 @@ class TableController extends Controller{
         $movies = Rating::where('user_id', $id)->get();
         return view('showData', ['data' => RatingResource::collection($movies)]);
     }
+
+    public function insertRating(Request $request){
+        $rating = new Rating;
+        $rating->user_id = $request->input('user_id');
+        //dd($rating);
+        $rating->movie_id = $request->input('movie_id');
+        $rating->rating = $request->input('rating');
+        $rating->save();
+        /*
+        $tmp = Rating::where('user_id', $rating->user_id)->get();
+
+        return $tmp;*/
+    }
+
+    public function deleteRating(Request $request){
+        $rating = Rating::find($request->input('id'));
+        $rating->delete();
+    }
+
+    public function updateRating(Request $request){
+        $rating = Rating::find($request->input('id'));
+        $rating->rating = $request->input('rating');
+        $rating->save();
+    }
 }
