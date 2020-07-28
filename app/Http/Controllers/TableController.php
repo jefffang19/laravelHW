@@ -38,13 +38,11 @@ class TableController extends Controller{
     }
 
     public function deleteRating(Request $request){
-        $rating = Rating::find($request->input('id'));
+        $rating = Rating::where('user_id', $request->input('user_id'))->where('movie_id', $request->input('movie_id'));
         $rating->delete();
     }
 
     public function updateRating(Request $request){
-        $rating = Rating::find($request->input('id'));
-        $rating->rating = $request->input('rating');
-        $rating->save();
+        $rating = Rating::where('user_id', $request->input('user_id'))->where('movie_id', $request->input('movie_id'))->update(['rating' => $request->input('rating')]);
     }
 }
