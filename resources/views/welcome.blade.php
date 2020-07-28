@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="link">
-                    <a href={{route('render_example',['name' => 'jeff'])}}>Display sample</a>
+                    <a href="{{route('serach_rating') }}">Search Rating</a>
                 </div>
         </div>
 

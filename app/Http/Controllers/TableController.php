@@ -16,7 +16,8 @@ class TableController extends Controller{
     public function RenderMovie(Request $request){
         $userid = $request->input('user_id');
         $movies = Rating::where('user_id', $userid)->get();
-        return RatingResource::collection($movies);
+        //return RatingResource::collection($movies);
+        return view('showData', ['ratingTable' => RatingResource::collection($movies)]);
     }
 
     public function testSelectMovie($id){

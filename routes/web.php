@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/search', function() {
+    return view('search');
+})->name('serach_rating');
+
 Route::get('foo', function () {
     return 'Hello World';
 });

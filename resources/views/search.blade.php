@@ -75,44 +75,12 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if(Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{url('/home') }}">Home</a>
-                    @else
-                        <a href="{{route('login') }}">Login</a>
-
-                        @if(Route::has('register'))
-                            <a href="{{route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-                @endif
-            
-            <div class="content">
-                <table>
-                    <thead>
-                        <tr>
-                            <th colspan="2">The table header</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>User Id</td>
-                            <td>Movie Id</td>
-                            <td>Rating</td>
-                        </tr>
-                        @foreach($ratingTable as $rating)
-                            <tr>
-                                <td>{{$rating->user_id}}</td>
-                                <td>{{$rating->movie_id}}</td>
-                                <td>{{$rating->rating}}</td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                
+        <div class="content">
+            <form action='/movies'>
+                <label for="uid">User Id:</label><br>
+                <input type="text" id="uid" name="user_id"><br>
+                <input type="submit"><br>
+            </form>
         </div>
 
     </body>
