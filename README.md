@@ -7,6 +7,18 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+# IIR Lab 2020 training : Laravel Homework<br>
+
+**Finished Steps:**<br>
+>1. 輸入使用者id，回傳他評分過的所有電影id(Read)(10pt)<br>
+>2. 輸入使用者id/他想評分的電影id/給他幾分，在資料庫新增一筆評分資料(Create)(10pt)<br>
+>3. 刪除某位使用者的某筆評分資料(Delete)(10pt)<br>
+>4. 更改某位使用者的某筆評分資料(例如:把分數從1分改成3分)(Update)(10pt)<br>
+>5. Part 3. 介面GUI<br>
+
+**Working on:**<br>
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
